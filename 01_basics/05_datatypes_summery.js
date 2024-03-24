@@ -41,3 +41,9 @@ console.table([ typeof heros, typeof myobj, typeof myfunction] );
 
 
 
+
+
+
+
+
+
