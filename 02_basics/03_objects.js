@@ -26,9 +26,9 @@ const jsUser = {
 // console.log(typeof jsUser[mySym]);
 
 // how to converte object
- jsUser.Email = "amit@chatgpt.com"
+//  jsUser.Email = "amit@chatgpt.com"
 // Object.freeze(jsUser)
-jsUser.Email = "amit@microsoft.com"
+// jsUser.Email = "amit@microsoft.com"
 // console.log(jsUser);
 
 jsUser.greeting = function(){
