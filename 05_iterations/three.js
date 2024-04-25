@@ -9,7 +9,7 @@ for(const num of arr){
 const Greeting = "Hello World"
 
 for(const Greet of Greeting){
-    // console.log(`Each Char of Greet ${Greet}`);
+    //  console.log(`Each Char of Greet ${Greet}`);
 }
 
 
@@ -22,7 +22,7 @@ map.set('PAK', 'PAKISTAN')
 // console.log(map);
 
 for (const [key, value] of map) {
-    // console.log(key, ":-", value);
+    //  console.log(key, ":-", value);
 }
 
 
@@ -31,6 +31,6 @@ const myObject = {
  Friend : "Shobhit"
 }
 
-for (const [key, value] of myObject) {
-    console.log(key, ":-", value);
-}
+// for (const [key, value] of myObject) {
+//      console.log(key, ":-", value); // myObject is not iterable OR foroff loop is not work
+// }
