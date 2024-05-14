@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>API Request</title>
+</head>
+<body style="background-color: #212122; color: aliceblue;">
+    Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+
+
+<div class="card-list">
+    <a href="#" class="card-item">
+        <img  id="show" src="" alt="Card Image">
+        <span class="developer">Developer</span>
+        <p id="bio">A "developer" codes software and websites.</p>
+        <div class="arrow">
+            <button id="developer" type="button">Display</button>
+        </div>
+    
+    </a>
+
+</div>
+
+</body>
+<script>
+
+const RequestURL = "https://api.github.com/users/HighTechGalaxy"
+const xhr = new XMLHttpRequest();
+// console.log(xhr.readyState) // 0	UNSENT	Client has been created. open() not called yet.
+xhr.open('GET', RequestURL)
+// console.log(xhr.readyState) //OPENED	open() has been called.
+
+xhr.onreadystatechange = function(){
+    console.log(xhr.readyState) // contuniously print
+
+    if (xhr.readyState === 4) {
+
+        const data = JSON.parse(this.responseText);
+        // console.log(typeof data );
+        // console.log(data.followers);
+
+        if (data.avatar_url) {
+                               const imgpic  =   function() {
+                                       document.getElementById('show').src = data.avatar_url;
+                                    }
+                    document.querySelector('#developer').addEventListener('click', imgpic);
+                } else {
+                    console.error('Avatar URL not found in the response.');
+                }
+            } 
+  
+    }
+xhr.send()
+
+
+
+    
+
+
+
+
+</script>
+
+</html>

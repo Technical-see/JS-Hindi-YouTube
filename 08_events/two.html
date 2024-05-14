@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighTech Galaxy</title>
+</head>
+<body>
+    
+    <h1>HighTech Galaxy</h1>
+    <button id ="stop" type="button">Stop</button>
+</body>
+
+<script>
+  const sayAmit = function(){
+        console.log("Learning Continue");
+    }
+
+    const ChangeText = function(){
+        document.querySelector('h1').innerHTML = "Best JS Series";
+    }
+
+   const changeMe = setTimeout(ChangeText, 2000);
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe);
+        console.log("STOPPED")
+    })
+</script>
+
+</html>
