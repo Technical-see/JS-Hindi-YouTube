@@ -114,3 +114,5 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
+
+// https://developer.mozilla.org/en-US/docs/Web/API/fetch
